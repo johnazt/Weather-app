@@ -1,10 +1,9 @@
-import { useEffect, useState } from "react";
 import WeatherCard from "./components/WeatherCard";
 import RingLoader from "react-spinners/RingLoader";
 import dataImg from "./dataImg";
-import axios from "axios";
 import "./App.css";
 import UseApi from "./hooks/UseApi";
+import { useEffect } from "react";
 
 function App() {
 	// ======= GET CUSTOM HOOK USEAPI ========
@@ -13,15 +12,15 @@ function App() {
 
 	// ===== SETTING BACKGROUND ======
 
-	function backgroundImage() {
+	useEffect(() => {
+
 		dataImg.map((element) => {
 			document.body.className = "body-background";
 			if (weather.weather?.[0].description === element.description) {
 				document.body.style.backgroundImage = `url(${element.img})`;
 			}
 		});
-	}
-	backgroundImage();
+	}, [weather]);
 
 	// ===== RENDER WEATHER CARD ======
 

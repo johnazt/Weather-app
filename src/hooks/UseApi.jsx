@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 const UseApi = () => {
+    
 	const [weather, setWeather] = useState({});
 	const [loader, setLoader] = useState(false);
 

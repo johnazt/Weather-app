@@ -26,16 +26,16 @@ const WeatherCard = ({ weather }) => {
 				</div>
 				<div className="weather__info-two">
 					<p className="weather__clouds">
-						<i className="bx bx-cloud"></i> Clouds:{" "}
+						<i className="bx bx-cloud"></i> Clouds:
 						<b>{weather.clouds?.all}%</b>
 					</p>
 					<p className="weather__humidity">
-						<i className="bx bxs-droplet"></i> Humidity:{" "}
+						<i className="bx bxs-droplet"></i> Humidity:
 						<b>{weather.main?.humidity}%</b>
 					</p>
 					<p className="weather__temp">
-						<i className="bx bxs-thermometer bx-flip-horizontal"></i>{" "}
-						Temperature:{" "}
+						<i className="bx bxs-thermometer bx-flip-horizontal"></i>
+						Temperature:
 						{isCelsius ? <b>{celsius}°C</b> : <b>{fahrenheit}°F</b>}
 					</p>
 					<button
