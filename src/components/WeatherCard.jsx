@@ -1,10 +1,11 @@
 import { useState } from "react";
 
 const WeatherCard = ({ weather }) => {
-	const [isCelsius, setIsCelsius] = useState(true);
 
+	const [isCelsius, setIsCelsius] = useState(true);
 	const celsius = Math.floor(weather.main?.temp - 273.15);
-	const fahrenheit = Math.floor((celsius * 9) / 5 + 32);
+    const fahrenheit = Math.floor((celsius * 9) / 5 + 32);
+    
 	return (
 		<div className="weather">
 			<h1 className="weather__title">Weather App</h1>
@@ -23,13 +24,13 @@ const WeatherCard = ({ weather }) => {
                 </div>
 				<div className="weather__info-two">
                     <p className="weather__clouds">
-                    <i class='bx bx-cloud'></i> Clouds: <b>{weather.clouds?.all}%</b>
+                    <i className='bx bx-cloud'></i> Clouds: <b>{weather.clouds?.all}%</b>
                     </p>
                     <p className="weather__humidity">
-                    <i class='bx bxs-droplet'></i> Humidity: <b>{weather.main?.humidity}%</b>
+                    <i className='bx bxs-droplet'></i> Humidity: <b>{weather.main?.humidity}%</b>
                     </p>
                     <p className="weather__temp">
-                    <i class='bx bxs-thermometer bx-flip-horizontal' ></i> Temperature: {isCelsius ? <b>{celsius}°C</b> : <b>{fahrenheit}°F</b>}
+                    <i className='bx bxs-thermometer bx-flip-horizontal' ></i> Temperature: {isCelsius ? <b>{celsius}°C</b> : <b>{fahrenheit}°F</b>}
                     </p>
                     <button
                         onClick={() => {
