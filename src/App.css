@@ -108,20 +108,20 @@ body {
 	/* transition: background-color, color 0.25s ease-in-out; */
 	width: 200px;
 }
-.celsius {
+.fahrenheit{
 	background-color: #212237;
 	color: #fff;
 	transition: background-color, color 0.25s ease-in-out;
 }
-.celsius:hover {
+.fahrenheit:hover {
 	background-color: #2a2b46;
 }
-.fahrenheit {
+.celsius {
 	background-color: #fff;
 	color: #212237;
 	transition: background-color, color 0.25s ease-in-out;
 }
-.fahrenheit:hover {
+.celsius:hover {
 	background-color: rgb(248, 245, 245);
 }
 @media screen and (min-width: 700px) {

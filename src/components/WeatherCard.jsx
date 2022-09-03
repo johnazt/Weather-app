@@ -2,7 +2,10 @@ import { useState } from "react";
 
 const WeatherCard = ({ weather }) => {
 	const [isCelsius, setIsCelsius] = useState(true);
+
+	// CONVERTION TO CELSIUS DEFAULT
 	const celsius = Math.floor(weather.main?.temp - 273.15);
+	// CONVERTION TO FAHRENHEIT
 	const fahrenheit = Math.floor((celsius * 9) / 5 + 32);
 
 	return (
@@ -35,11 +38,13 @@ const WeatherCard = ({ weather }) => {
 						Temperature:{" "}
 						{isCelsius ? <b>{celsius}°C</b> : <b>{fahrenheit}°F</b>}
 					</p>
-					<button  
+					<button
 						onClick={() => {
 							setIsCelsius((prevIsCelsius) => !prevIsCelsius);
 						}}
-						className={isCelsius ? "weather__btn fahrenheit": "weather__btn celsius"}
+						className={
+							isCelsius ? "weather__btn fahrenheit" : "weather__btn celsius"
+						}
 					>
 						{isCelsius ? "To Farenheit" : "To Celsius"}
 					</button>
