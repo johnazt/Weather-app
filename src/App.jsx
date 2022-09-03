@@ -21,9 +21,12 @@ function App() {
 				.then((res) => {
 					setWeather(res.data);
 					setLoader(true);
-				});
+				})
+				.catch((error) => console.log(error));
 		}
+
 	}, []);
+	backgroundImage();
 
 	// ===== SETTING BACKGROUND ======
 
@@ -35,7 +38,6 @@ function App() {
 			}
 		});
 	}
-	backgroundImage();
 
 	// ===== RENDER WEATHER CARD ======
 
@@ -45,7 +47,7 @@ function App() {
 				<WeatherCard weather={weather} />
 			) : (
 				<div className="loader">
-            <RingLoader color={"#fff"} size={100} />
+					<RingLoader color={"#fff"} size={100} />
 				</div>
 			)}
 		</div>
