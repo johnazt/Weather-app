@@ -35,5 +35,9 @@ export default [
         description: "mist",
         img: "https://i.gifer.com/5yp.gif"
     },
+    {
+        description: "overcast clouds",
+        img:"https://i.gifer.com/8YD1.gif"
+    },
 
 ]

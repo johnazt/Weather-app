@@ -15,6 +15,7 @@ function App() {
 	useEffect(() => {
 
 		dataImg.map((element) => {
+			console.log(element.description)
 			document.body.className = "body-background";
 			if (weather.weather?.[0].description === element.description) {
 				document.body.style.backgroundImage = `url(${element.img})`;
